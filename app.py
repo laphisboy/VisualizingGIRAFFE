@@ -14,7 +14,8 @@ from giraffe_tools import *
 app = dash.Dash(__name__)
 
 app.layout = html.Div([
-    dcc.Graph(id='graph',style={'width': '90vw', 'height': '70vh'}),
+    html.H1("Ray casting visualization"),
+    dcc.Graph(id='graph'),
     
     html.Div([
         html.Div([
@@ -74,7 +75,7 @@ app.layout = html.Div([
                                   type='number', style={'width': '50%'}
                                  )
                     ]),
-                ],  style = {'width' : '34%', 'float' : 'left', 'display' : 'inline-block'}),
+                ], style = {'width' : '34%', 'float' : 'left', 'display' : 'inline-block'}),
             ]),
             
             # color
@@ -90,7 +91,7 @@ app.layout = html.Div([
                                  ], style={'width': '80%'}
                              )
                 ])
-                ], style = {'width' : '34%', 'float' : 'left', 'display' : 'inline-block'}),
+                ],  style = {'width' : '34%', 'float' : 'left', 'display' : 'inline-block'}),
                 
                 html.Label([ "ray color",
                     html.Div([
