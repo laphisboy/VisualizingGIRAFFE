@@ -15,7 +15,7 @@ app = dash.Dash(__name__)
 
 app.layout = html.Div([
     html.H1("Ray casting visualization"),
-    dcc.Graph(id='graph'),
+    dcc.Graph(id='graph', style={'width': '90wh', 'height': '60vh'}),
     
     html.Div([
         html.Div([
