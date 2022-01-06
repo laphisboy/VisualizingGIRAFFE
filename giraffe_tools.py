@@ -38,6 +38,7 @@ def get_camera_mat(fov=49.13, invert=True):
 # 2. get camera position with camera pose (theta & phi)
 def to_sphere(u, v):
     theta = 2 * np.pi * u
+    # phi = 2 * np.pi * v
     phi = np.arccos(1 - 2 * v)
     cx = np.sin(phi) * np.cos(theta)
     cy = np.sin(phi) * np.sin(theta)
